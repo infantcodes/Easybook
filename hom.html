@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HOME |Welcome</title>
+
+
+
+        <!-- links -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/upload.css">
+  </head>
+  <body>
+    <h3>listed houses</h3>
+
+
+    <!-- Sidebar on click -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card-2 w3-animate-left w3-xxlarge"
+    style="display:none;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button">Link 4</a>
+    <a href="#" class="w3-bar-item w3-button">Link 5</a>
+    </nav>
+    <!-- Navbar -->
+    <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+    href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i>upload</a>
+    <a href="http://localhost/easybook/home.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>EASYBOOK</a>
+    <a href=".php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">home</a>
+    <a href="viewtr.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">my profile</a>
+    <a href="upload.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">upload services</a>
+    <a href="viewtr.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">log out</a>
+    </div>
+    <!-- </div> -->
+
+
+
+    <h3>Upload your services</h3>
+    <div id="content">
+      <?php
+        $db = mysqli_connect("localhost","root","","easybook");
+        $sql = "select * from house";
+        $result = mysqli_query($db, $sql);
+        while ($row = mysqli_fetch_array($result)) {
+          echo "<div id='image_div'>";
+            echo "<img src ='".$row['image']."' >";
+          echo "<p>".$row['price']."</p>";
+          echo "</div>";
+        }
+       ?>
+    <form action="upload.php" enctype="multipart/form-data" method="post">
+      Your userID: <input type="text" name="id" ><br>
+      Address: <input type="text" name="address" ><br>
+      House description:<br><textarea name="des" rows="5" cols="40">
+      </textarea><br>
+      Price: <br><input type="number" name="price" ><br>
+      <input type="file" name="image"><br><br>
+      <input type="submit" name="upload" value="Upload image">
+
+    </form>
+    </div>
+  </body>
+</html>

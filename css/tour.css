@@ -1,0 +1,29 @@
+body{
+  /*background-color: #770b0b;*/
+  text-align: left;
+  background-image: url('../images/tourist.jpg');
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-position: 90% 20%; 
+
+}
+
+
+.lg{
+	/*background-color: black;*/
+	color:#77710b;
+	width:400px; 
+	margin:0 0 0px 800px;
+	/*color:green;*/
+}	
+.lg td{
+	color:white;
+	
+}
+
+#button{
+	background-color:#06966f;
+	width:100px; 
+}

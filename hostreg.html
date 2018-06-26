@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HOST PORTAL</title>
+
+  <!-- links -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/hostreg.css">
+
+  </head>
+  <body>
+    <!-- Sidebar on click -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card-2 w3-animate-left w3-xxlarge"
+    style="display:none;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button">Link 4</a>
+    <a href="#" class="w3-bar-item w3-button">Link 5</a>
+    </nav>
+    <!-- Navbar -->
+  <div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+   href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="home.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>EASYBOOK</a>
+</div>
+</div>
+<br><br>
+<!-- this is the section where the log in and registration form for hosts is -->
+    <h2>LOG IN</h2>
+    <!-- testing reg code -->
+    <fieldset style="width:30%"><legend>Host Sign in</legend>
+    <table border="0">
+    <tr>
+  <form method="POST" action="php/hom.php" enctype="multipart/form-data">
+    <td>Email</td><td> <input type="email" name="ema"></td>
+    </tr>
+    <tr>
+    <td>password</td><td> <input type="password" name="pas" required></td>
+    </tr>
+    <tr>
+    <td><input id="button" type="submit" name="submit" value="login"></td>
+  </tr>
+
+    </form>
+    </table>
+  </fieldset>
+
+
+
+
+
+    <h2>CREATE NEW ACCOUNT</h2>
+<!-- testing reg code -->
+<fieldset style="width:40%"><legend>Host Sign up</legend>
+<table border="0">
+  <tr>
+  <!-- <form method="POST" action="php/hostlg.php">
+</form> -->
+<form method="POST" action="php/hostreg.php">
+  <td>Name</td><td> <input type="text" name="hostnm"></td>
+</tr>
+<tr>
+  <td>Email</td><td> <input type="text" name="email" required></td>
+</tr>
+<tr>
+  <td>
+  Gender:<br>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+</td>
+</tr>
+
+<tr>
+  <td>Address</td><td> <input type="text" name="address" required></td>
+</tr>
+
+<tr>
+  <td>Password</td><td> <input type="password" name="pass"></td>
+</tr>
+<tr>
+  <td>Confirm Password </td><td><input type="password" name="cpass"></td>
+</tr>
+<tr>
+  <td><input id="button" type="submit" name="submit" value="Sign-Up"></td>
+</tr>
+</form>
+</table>
+</fieldset>
+
+  </body>
+</html>

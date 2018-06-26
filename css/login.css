@@ -1,0 +1,40 @@
+body{
+  background-color: ;
+  text-align: center;
+}
+/*background: #0f8c66;*/
+.reg{
+  text-align: center;
+}
+.login{
+  background: #41685c;
+  text-align: center;
+}
+.reg{
+  background: #41685c;
+  text-align: center;
+}
+#reg{
+  border: solid gray 1px;
+  width: 60%;
+  border-radius: 5px;
+  margin: 80px auto;
+  background: white;
+}
+#fld{
+
+}
+#frm{
+  border: solid gray 1px;
+  width: 60%;
+  border-radius: 5px;
+  margin: 80px auto;
+  background: white;
+
+}
+#button{
+  color: #fff;
+  background:#337ab7;
+  padding:5px;
+  margin-left: 69%;
+}

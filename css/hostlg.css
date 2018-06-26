@@ -1,0 +1,22 @@
+body{
+	text-align: left;
+  /*background-image: url('../images/host1.jpg');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: grey;
+}
+/*#770b0b*/
+.lg{
+	color:teal;
+	width:400px; 
+	margin:0 auto;
+	/*color:green;*/
+}
+.lg td{
+	color:black;
+	
+}
+#button{
+	background-color:#06966f;
+	width:100px; 
+}

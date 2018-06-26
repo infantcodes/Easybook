@@ -1,0 +1,10 @@
+body{
+  background-color:grey;
+  text-align: center;
+}
+.bk{
+	text-align: center;
+	width:300px; 
+	margin:0 auto;
+	/*margin:;*/
+}
